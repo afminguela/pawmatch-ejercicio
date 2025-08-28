@@ -6,6 +6,7 @@ import com.example.demo.enums.Sexo;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +17,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,7 +66,7 @@ public class Mascota {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario propietario;
+    private Usuario dueno;
 
     @ManyToMany(mappedBy = "mascotasParticipantes")
     private Set<Evento> eventos = new HashSet<>();

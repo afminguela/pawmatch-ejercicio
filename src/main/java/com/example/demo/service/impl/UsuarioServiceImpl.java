@@ -1,20 +1,21 @@
 package com.example.demo.service.impl;
 
 
-import com.example.demo.dto.chat.ChatResponseDTO;
+
 import com.example.demo.dto.usuario.UsuarioRequestDTO;
 import com.example.demo.dto.usuario.UsuarioResponseDTO;
 import com.example.demo.dto.usuario.UsuarioUpdateDTO;
-import com.example.demo.model.Chat;
+
 import com.example.demo.model.Usuario;
 import com.example.demo.repository.UsuarioRepository;
 import com.example.demo.service.interfaces.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-public class UsuarioImpl implements UsuarioService {
+@Service
+public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
     UsuarioRepository usuarioRepository;

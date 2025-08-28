@@ -20,6 +20,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
