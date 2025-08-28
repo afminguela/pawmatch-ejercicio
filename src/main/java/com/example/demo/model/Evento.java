@@ -57,4 +57,7 @@ public class Evento {
     )
     private Set<Mascota> mascotasParticipantes = new HashSet<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario organizadorId;
 }

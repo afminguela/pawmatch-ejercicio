@@ -3,8 +3,9 @@ package com.example.demo.controller;
 import com.example.demo.dto.usuario.UsuarioRequestDTO;
 import com.example.demo.dto.usuario.UsuarioResponseDTO;
 import com.example.demo.dto.usuario.UsuarioUpdateDTO;
-import com.example.demo.service.impl.UsuarioImpl;
-import com.example.demo.service.interfaces.UsuarioService;
+
+import com.example.demo.service.impl.UsuarioServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class UsuarioController {
 
 
         @Autowired
-        private UsuarioImpl usuarioService;
+        private UsuarioServiceImpl usuarioService;
 
         //Get va sin cuerpo, peticion de info
     //post es envío de info, lo suyo es que lleve un cuerpo

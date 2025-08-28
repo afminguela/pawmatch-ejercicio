@@ -8,10 +8,11 @@ import com.example.demo.repository.ChatRepository;
 import com.example.demo.repository.UsuarioRepository;
 import com.example.demo.service.interfaces.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
 public class ChatServiceImpl implements ChatService {
 
     @Autowired

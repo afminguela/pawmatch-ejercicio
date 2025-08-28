@@ -2,6 +2,7 @@ package com.example.demo.dto.evento;
 
 
 
+import com.example.demo.model.Usuario;
 import lombok.Data;
 
 import java.time.LocalDateTime;
